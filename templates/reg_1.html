@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-icons.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"/>
+    <!--<link rel="stylesheet" href="{{url_for('static',filename='aos.css')}}"/>-->
+    <link rel="stylesheet" href="{{url_for('static',filename='font.css')}}"/>
+    <title>CRS-Recomendations</title>
+</head>
+<body>
+  <header>
+    <!-- <img src="/static/img/TNEGA_Logo.svg" id="tnlogo" alt="">
+      <img src="/static/img/TN_Logo.png" id="logo" alt="">
+      
+      <h1 id="dept-name" data-aos="flip-up" data-aos-duration="500"> <b>Directorate Of Technical Education</b></h1>
+      <h4 id="head-abbre" data-aos="flip-left" data-aos-duration="800">College Recommendation</h4> -->
+    <!--
+        <h3 id="dept-tname">Government of TamilNadu | National Rural Health Mission</h3>-->
+  </header>
+  <div class="back"></div>
+<p>&nbsp;</p>
+<main>
+</main>
+<div class="container">
+  <div class="result-box">
+
+
+    <div>
+      <div id="tive" data-aos="flip-left" data-aos-duration="600">
+        <table>
+          <tr >
+            <!-- <th class="py-2">S.NO</th> -->
+            <th class="text-center py-2">Recommended Colleges</th>
+          </tr>
+          <tr>
+            <!-- <td>1</td> -->
+            <td class="px-5">{{result[0]}}</td>
+ 
+          </tr>
+          <tr>
+            <!-- <td>2</td> -->
+            <td class="px-5">{{result[1]}}</td>
+  
+          </tr>
+          <tr>
+            <!-- <td>3</td> -->
+            <td class="px-5">{{result[2]}}</td>
+ 
+          </tr>
+          <tr>
+            <!-- <td>4</td> -->
+            <td class="px-5">{{result[3]}}</td>
+          
+          </tr>
+          <tr>
+            <!-- <td>5</td> -->
+            <td class="px-5">{{result[4]}}</td>
+           
+          </tr>
+          <tr>
+            <!-- <td>6</td> -->
+            <td class="px-5">{{result[5]}}</td>
+        
+          </tr>
+
+          <tr>
+            <!-- <td>7</td> -->
+            <td class="px-5">{{result[6]}}</td>
+          
+          </tr>
+          <tr>
+            <!-- <td>8</td> -->
+            <td class="px-5">{{result[7]}}</td>
+
+          </tr>
+          <tr>
+            <!-- <td>9</td> -->
+            <td class="px-5">{{result[8]}}</td>
+
+          </tr>
+          <tr>
+            <!-- <td>10</td> -->
+            <td class="px-5">{{result[9]}}</td>
+
+          </tr>
+
+        </table>
+      </div>
+      </div>
+      <div class="container-sm w-50">
+      <div class="row">
+        <a href="http://localhost:5000/" class="home-btn">Back to Home</a>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="container-fluid footer pb-3 pt-4">
+  <footer>
+      <span></span>
+  </footer>
+</div>      
+</body>
+<script>
+    var imgbox = document.getElementById("imgbox");
+    
+    var loadFile = function(event){
+        imgbox.style.backgroundImage = "url(" +URL.createObjectURL(event.target.files[0]) +")";
+    }
+    </script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+
+<script src="/assets/js/dark-mode.js"></script>
+<script src="/assets/js/jquery.localisationTool.js"></script>
+<script src="/assets/js/aos.js"></script>
+<script>
+    AOS.init();
+ </script>
+</html>

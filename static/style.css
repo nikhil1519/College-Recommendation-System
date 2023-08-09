@@ -1,0 +1,309 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #003e53;
+    /* background-image: linear-gradient(to right,#d2277a , #006a97 90%); */
+    box-shadow: 2px 2px 8px black;
+    z-index: 999;
+}
+.back{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: linear-gradient(to right,#d2277a , #006a97 90%);
+    z-index: -5;
+}
+#student{
+    width: 60%;
+    z-index: -2;
+    transform: translate(40%,60%);
+}
+.back2{
+    -webkit-animation: bg 20s linear infinite;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+    animation: bg 20s linear infinite;
+    z-index: -5;
+}
+.con1{
+    margin-top: 10em;
+    background-color:#ffffff6d;
+    box-shadow: 2px 2px 8px black;
+    border-radius: 40px;
+    border-width: 1px;
+    padding: 30px;
+    padding-bottom: 3em;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.687);
+}
+
+.con2{
+    margin-bottom: 20px;
+}
+#dept-name{
+   color: white;
+}
+@media (min-width: 340px){
+    #logo{
+        position: fixed;
+        top: 1px;
+        left:1%;
+        width: 100px;
+    }
+    
+    #tnlogo{
+        position: fixed;
+        top: 12px;
+        right:2%;
+        width: 80px;
+    }
+    #head-abbre{
+
+        color: #00455B;
+        font-size: 10px;
+    }
+    #dept-name{
+        margin-top: 30px;
+    }
+}
+@media (min-width: 640px){
+    #logo{
+        position: fixed;
+        top: 1  px;
+        left:2%;
+        width: 150px;
+    }
+    
+    #tnlogo{
+        position: fixed;
+        top: 20px;
+        right:2%;
+        width: 100px;
+    }
+    
+    #head-abbre{
+        color: #00455B;
+        font-size: 20px;
+    }
+
+}
+@media (min-width: 1080px){
+    #logo{
+        position: fixed;
+        top: 20px;
+        left:2%;
+        width: 70px;
+    }
+    
+    #tnlogo{
+        position: fixed;
+        top: 10px;
+        right:2%;
+        width: 100px;
+    }
+    #pro-name{
+        font-size: 14px;
+        letter-spacing: 6px;
+        color: #757575;
+    }
+    #dept-name{
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-top: 20px;
+    }
+}
+#upload-btn{
+    display: none;
+}
+#upload-photo{
+    padding: 10px;
+    font-size: var(font-size);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    width: 300px;
+    background-color:rgb(255, 230, 0);
+    top: 100%;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#upload-photo:hover{
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #00455B;
+}
+.submit-btn{
+    padding: 5px 60px;
+    background-color: #003e53;
+    color: white;
+    border-color: aliceblue;
+    margin: 2em 0px 0px 0px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.submit-btn:hover{
+    transform: scale(1.04);
+    box-shadow: 2px 2px 8px black;
+}
+
+.home-btn{
+    padding: 8px 0px;
+    background-color:white ;
+    color: #003e53;
+    margin: 4em 0px 30px 0px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.home-btn:hover{
+    transform: scale(1.01);
+    color:#003e53;
+    border-width: 1px;
+    border-radius: 20px;
+    background-color: #f4e400;
+    box-shadow: 2px 2px 8px rgb(0, 0, 0);
+}
+
+main{
+    margin-top: 10em;
+}
+#imgbox{
+    border-radius: 30px;
+    background-image: linear-gradient(to top ,grey, rgb(255, 255, 255));
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px;
+    width: 400px;
+    height: 400px;
+}
+#kural{
+    margin-top: 8.35em;
+    background-color: #003e53;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.footer{
+    padding: 20px 0;
+    margin-top: 5em;
+    margin-bottom: 0!important;
+    line-height: 0;
+    background-color: #030303a8;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 8px black;
+}
+
+@media (min-width: 680px){
+    #imgbox{
+        margin-top: 20px;
+        width: 400px;
+        height: 400px;
+
+    }
+    .boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #upload-photo{
+        padding: 10px;
+        margin-top: 20px;
+
+    }
+    #upload-photo:hover{
+        cursor: pointer;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: #00455B;
+    }
+    .footer{
+        width: 100%;
+    }
+
+}
+@media (min-width: 350px){
+    .footer{
+        margin-top: 8em!important;
+    }
+}
+@media (max-width: 2200px){
+    .footer{
+            margin-top: 15em!important;
+            padding-bottom: 20px;
+    }
+}
+.boxes{
+    height:500px;
+    top: -50px;
+    position: relative;
+    
+}
+label{
+    color: white;
+}
+
+#tive{
+    font-size: 18px;
+    text-align: justify;
+}
+#table-header{
+    background-color: blue;
+}
+.result-box{
+    background-color: rgba(0, 0, 0, 0.527);
+    background-size: cover;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 50px;
+    margin-bottom: 5em;
+}
+/* power bi*/
+.chart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#powerbi-chart{
+    width: 90%!important;
+    height: 45em!important;
+    border-radius: 0em 14.8em 0em 14.8em;
+    margin-bottom: 0em;
+    opacity: 90%;
+    z-index: 99;   
+}
+.logoBar .logo .text {
+    display: none!important;
+    height: 0 !important; 
+    background-color: #eaeaea00 !important;
+}
+#resultnumber{
+    vertical-align: middle;
+    border: white;
+    border-style: dashed;
+    border-width: 2px;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2em;
+}

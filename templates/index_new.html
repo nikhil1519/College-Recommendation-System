@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap-icons.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='aos.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static',filename='font.css')}}"/>
+    <script>
+      function toggleField(hideObj,showObj){
+        hideObj.disabled=true;        
+        hideObj.style.display='none';
+        showObj.disabled=false;   
+        showObj.style.display='inline';
+        showObj.focus();
+      }
+      </script>
+    <title>CRS</title>
+</head>
+<body>
+    <header>
+      <!--<img data-aos="fade-right" data-aos-duration="1200" src="/static/img/TNEGA_Logo.svg" id="tnlogo" alt="">
+        <img data-aos="fade-left" data-aos-duration="1200" src="/static/img/TN_Logo.png" id="logo" alt="">-->
+        
+        <h3 id="dept-name" data-aos="flip-up" data-aos-duration="500"> <b>College Recommendation System</b></h3>
+        <h4 id="pro-name" data-aos="flip-left" data-aos-duration="800">Powered by CDAC</h4>
+      <!--<h3 id="dept-tname">Government of TamilNadu | National Rural Health Mission</h3>-->
+    </header>
+    <p>&nbsp;</p>
+    <div class="back"></div>
+    <div class="row">
+    <div class="col-6"><img src="/static/img/student.png" id="student" alt=""></div>
+    <div class="col-6"><div class="container con1 w-75 p-4">
+  
+      <form class="con2" action = "http://localhost:5000/check" method = "POST" 
+             enctype = "multipart/form-data">
+        <div class="row mt-5">
+                <div class="col-sm-12">
+                <label for="formGroupExampleInput2">Category</label>
+                <select name="Community" class="form-select" aria-label="Default select example">
+                          <option selected>Select</option>       
+                          <option value="0">BC</option>
+                          <option value="1">BCM</option>
+                          <option value="2">SC</option>
+                          <option value="3">MBC</option>
+                          <option value="4">OC</option>
+                          <option value="5">SCA</option>
+                          <option value="6">ST</option></select>
+                  </div>
+                  <div class="col-sm-12">
+                    <label for="formGroupExampleInput2">Course</label>
+                    <select name="Branch" class="form-select" aria-label="Default select example">
+                      <option selected>Select</option>
+                      <!-- <option value="100">Select All</option>-->
+                      <option value="0" >Aeronautical Engineering</option>
+                      <option value="1" >Aerospace Engineering</option>
+                      <option value="2" >Agricultural and Irrigation Engineering (SS)</option>
+                      <option value="3" >Agriculture Engineering</option>
+                      <option value="4" >Apparel Technology (SS)</option>
+                      <option value="5" >Architecture</option>
+                      <option value="6" >Architecture (SS)</option>
+                      <option value="7" >Artificial Intelligence and Data Science</option>
+                      <option value="8" >Automobile Engineering</option>
+                      <option value="9" >Automobile Engineering (SS)</option>
+                      <option value="10"> Bio- Medical Engineering</option>
+                      <option value="11"> Bio- Medical Engineering (SS)</option>
+                      <option value="12"> Bio Technology</option>
+                      <option value="13"> Bio Technology (SS)</option>
+                      <option value="14"> Ceramic Technology (SS)</option>
+                      <option value="15"> Chemical and Electro Chemical Engineering (SS)</option>
+                      <option value="16"> Chemical Engineering</option>
+                      <option value="17"> Chemical Engineering (SS)</option>
+                      <option value="18"> Civil and Structural Engineering</option>
+                      <option value="19"> Civil Engg. and Planning</option>
+                      <option value="20"> Civil Engineering</option>
+                      <option value="21"> Civil Engineering (SS)</option>
+                      <option value="22"> Civil Engineering (Tamil Medium)</option>
+                      <option value="23"> Computer and Communication Engineering</option>
+                      <option value="24"> Computer Science and Business System</option>
+                      <option value="25"> Computer Science and Business System(SS)</option>
+                      <option value="26"> Computer Science and Engineering</option>
+                      <option value="27"> Computer Science and Engineering (Al and Machine Learning)</option>
+                      <option value="28"> Computer Science and Engineering (Big Data Analytics)</option>
+                      <option value="29"> Computer Science and Engineering (SS)</option>
+                      <option value="30"> Computer Science and Engineering(Internet of Things and Cyber Security including Block Chain Technology)</option>
+                      <option value="31"> Computer science and Technology</option>
+                      <option value="32"> Computer Technology</option>
+                      <option value="33"> Cyber Security</option>
+                      <option value="34"> Elec. And Electronics Engg (SS)</option>
+                      <option value="35"> Electrical and Electronics (Sandwich) (SS)</option>
+                      <option value="36"> Electrical and Electronics Engineering</option>
+                      <option value="37"> Electronics and Communication Engg. (SS)</option>
+                      <option value="38"> Electronics and Communication Engineering</option>
+                      <option value="39"> Electronics and Instrumentation Engg. (SS)</option>
+                      <option value="40"> Electronics and Instrumentation Engineering</option>
+                      <option value="41"> Electronics and Telecommunication Engg.</option>
+                      <option value="42"> Environmental Engg.</option>
+                      <option value="43"> Fashion Technology</option>
+                      <option value="44"> Fashion Technology (SS)</option>
+                      <option value="45"> Food Technology</option>
+                      <option value="46"> Food Technology (SS)</option>
+                      <option value="47"> Geo-Informatics</option>
+                      <option value="48"> Handloom and Textile Technology</option>
+                      <option value="49"> Industrial Bio-Tech. (SS)</option>
+                      <option value="50"> Industrial Bio-Technology</option>
+                      <option value="51"> Industrial Engineering</option>
+                      <option value="52"> Industrial Engineering and Management</option>
+                      <option value="53"> Information Science and Engineering</option>
+                      <option value="54"> Information Tech. (SS)</option>
+                      <option value="55"> Information Technology</option>
+                      <option value="56"> Instrumentation and Control Engineering</option>
+                      <option value="57"> Instrumentation and Control Engineering (SS)</option>
+                      <option value="58"> Leather Technology</option>
+                      <option value="59"> Manufacturing Engineering</option>
+                      <option value="60"> Marine Engineering</option>
+                      <option value="61"> Material Science and Engineering (SS)</option>
+                      <option value="62"> Mechanical (Manufacturing)</option>
+                      <option value="63"> Mechanical and Automation Engineering</option>
+                      <option value="64"> Mechanical and Mechatronics Engineering(Additive Manufacturing)</option>
+                      <option value="65"> Mechanical Engg. (SS)</option>
+                      <option value="66"> Mechanical Engineering</option>
+                      <option value="67"> Mechanical Engineering (Sandwich)</option>
+                      <option value="68"> Mechanical Engineering (Sandwich) (SS)</option>
+                      <option value="69"> Mechanical Engineering (Tamil Medium)</option>
+                      <option value="70"> Mechatronics</option>
+                      <option value="71"> Mechatronics (SS)</option>
+                      <option value="72"> Medical Electronics Engg.</option>
+                      <option value="73"> Metallurgical Engg. (SS)</option>
+                      <option value="74"> Metallurgical Engineering</option>
+                      <option value="75"> Mining Engineering</option>
+                      <option value="76"> Nano Science and Technology</option>
+                      <option value="77"> Petro Chemical Technology</option>
+                      <option value="78"> Petrochemical Engineering</option>
+                      <option value="79"> Petroleum Engineering</option>
+                      <option value="80"> Petroleum Engineering and Technology (SS)</option>
+                      <option value="81"> Pharmaceutical Tech (SS)</option>
+                      <option value="82"> Pharmaceutical Technology</option>
+                      <option value="83"> Plastic Technology</option>
+                      <option value="84"> Polymer Technology</option>
+                      <option value="85"> Printing and Packaging Technology</option>
+                      <option value="86"> Production Engineering</option>
+                      <option value="87"> Production Engineering (Sandwich) (SS)</option>
+                      <option value="88"> Production Engineering (SS)</option>
+                      <option value="89"> Robotics and Automation</option>
+                      <option value="90"> Robotics and Automation (SS)</option>
+                      <option value="91"> Rubber and Plastic Tech.</option>
+                      <option value="92"> Textile Chemistry</option>
+                      <option value="93"> Textile Technology</option>
+                      <option value="94"> Textile Technology (SS)"</option></select>
+              </div>
+                    </div>
+    
+                    <div class="row">
+                    <div class="form-group">
+                          <label for="formGroupExampleInput2"></label>
+                              <!-- <label for="formGroupExampleInput2">Type</label>
+                              <select name="Type" class="form-select" aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option value="5">Select All</option>
+                                       
+                                <option value="0"> SELF FINANCING ENGINEERING COLLEGES</option>
+                                <option value="1"> CONSTITUENT COLLEGES</option>
+                                <option value="2"> GOVERNMENT COLLEGES</option>
+                                <option value="3"> GOVERNMENT AIDED COLLEGES</option>
+                                <option value="4"> CECRI AND CIPET</option>
+                              </select> -->
+       
+                            </div>
+                          </div>
+                           
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <label for="formGroupExampleInput">Rank</label>
+                              <input type="number" class="form-control" name="Rank" placeholder="Rank">
+                            </div>
+                            <div class="col-sm-12">
+                              <label for="formGroupExampleInput">TNEA Score</label>
+                              <input type="number" class="form-control" id="formGroupExampleInput" name="Cut_off" placeholder="Cut-Off" min="0" max="150">
+                        </div>
+                          </div>
+                          <div class="container-fluid text-center" data-aos="flip-left" data-aos-duration="1200">
+                          <input class="submit-btn" type = "submit" value="Submit"/>
+                        </div>
+        </form>
+    </div>
+  </div>
+</div>
+    
+
+</div>
+<marquee id="kural" direction="left">College Recommendation System developed by Navaneethanath and Nikhil for CDAC</marquee>
+<!-- <div class="container-fluid footer pb-4 pt-4">
+  <footer>
+    Thankyou, Have a great day!
+      <span></span>
+  </footer>
+</div>       -->
+</body>
+<script>
+    var imgbox = document.getElementById("imgbox");
+    
+    var loadFile = function(event){
+        imgbox.style.backgroundImage = "url(" +URL.createObjectURL(event.target.files[0]) +")";
+    }
+    </script>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/aos.js"></script>
+<script>
+    AOS.init();
+ </script>
+</html>
